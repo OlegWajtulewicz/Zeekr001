@@ -1,0 +1,631 @@
+//====================================================================================================
+.main-block {
+    //@include adaptiveValue("padding-top", 100, 80, 3, 3000, 767);
+    @include adaptiveValue("padding-bottom", 120, 70);
+    padding-top: toRem(100);
+    @media (max-width:$tablet){
+        padding-top: toRem(120);
+    }
+    @media (max-width:$mobile){
+        padding-top: 0 !important; 
+    }
+    
+    // .main-block__container
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        @media (max-width:$mobile){
+            flex-direction: column; 
+            gap: toRem(20);
+            //@include adaptiveValue("padding-bottom", 100, 50);
+            padding-top: 1.875rem;
+        }
+    }
+
+    // .main-block__titles
+
+    &__titles {
+    }
+
+    // .main-block__media
+
+    &__media {
+    }
+
+    // .main-block__image
+
+    &__image {
+        display: flex;
+        align-items: center;
+        width: 125%; 
+        margin-left: toRem(-50);
+        @media (max-width:$mobile){
+           margin-left: toRem(-15);  
+           width: 110%; 
+        }
+    }
+}
+.titles-main {
+    display: flex;
+    flex-direction: column;
+    @include adaptiveValue("padding-top", 50, -150);
+    gap: toRem(30);
+    @media (max-width:$tablet){
+        margin-top: toRem(-90);
+        gap: toRem(10);
+        width: 60%;
+    }
+    @media (max-width:$mobile){
+         width: 100%; 
+    }
+    // .titles-main__title
+
+    &__title {
+        max-width: toRem(350);
+        @media (max-width: $tablet){
+            max-width: 100%;
+        }
+    }
+
+    // .titles-main__subtitle
+
+    &__subtitle {
+        @include adaptiveValue("font-size", 32, 20);
+        font-weight: 600;
+        line-height: 150%;
+    }
+    &__subsubtitle {
+        @include adaptiveValue("font-size", 22, 18);
+        color: $mainGold;
+    }
+}
+
+//====================================================================================================
+.form-section {
+    @include adaptiveValue("padding-top", 100, 40);
+    @include adaptiveValue("padding-bottom", 70, 40);
+    margin-top: toRem(-50);
+    padding-left: toRem(10);
+    padding-right: toRem(10);
+    // .form-section__container
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: toRem(20);
+        padding: toRem(50) toRem(80);
+        border-radius: toRem(40);
+        background-color: $mainColor;
+        @media (max-width:$tablet){
+            grid-template-columns: 1fr;
+        }
+        @media (max-width:$mobile){
+            @include adaptiveValue("padding-left", 80, 20, 0, 767, 310); 
+            @include adaptiveValue("padding-right", 80, 20);
+        }
+    }
+
+    // .form-section__titles
+
+    &__titles {
+        display: grid;
+        align-content: center;
+        gap: toRem(30);
+        color: $bgColor; 
+        text-align: center;
+        @media (max-width:$tablet){
+            text-align: center;
+        } 
+    }
+
+    // .form-section__title
+
+    &__title {
+        @include adaptiveValue("font-size", 80, 40);
+        font-weight: 700;
+    }
+
+    // .form-section__subtitle
+
+    &__subtitle {
+        font-size: toRem(32);
+        @include adaptiveValue("font-size", 32, 22);
+        font-weight: 500;
+        line-height: 150%;
+    }
+
+    
+}
+.form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: toRem(15);
+    position: relative;
+    &::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(184, 184, 184, 0) url("@img/loading.gif") center / 50px no-repeat;
+            border-radius: 4px;
+            opacity: 1;
+            visibility: hidden;
+            transition: all 0.5s ease 0s;
+        }    
+    &._sending::after {
+            opacity: 1;
+            visibility: visible;
+    }
+    // .form__input
+
+    &__input {
+        padding: 0 toRem(20);
+        border-radius: toRem(18);
+        line-height: 130%;
+        width: 100%;
+        font-size: 18px;
+        letter-spacing: 0.0625rem;
+        outline: none;
+        height: toRem(60);
+    }
+    .error {
+        border: 1px solid red;
+    }
+    label.error {
+        color:#FFFFFF;
+        border: none;
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 0.8rem;
+    }
+}
+
+
+.checkbox-form {
+    display: grid;
+    gap: toRem(30);
+    height: toRem(122);
+
+    // .checkbox-form__body
+
+    &__body {
+        position: relative;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    &__button {
+        color: #ffffff;
+        font-size: 1.3125rem;
+        line-height: 155%;
+        font-weight: 500;
+        border-radius: toRem(30);
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+        background-color: $mainGold;
+        align-items: center;
+        width: 100%;
+        padding: toRem(15);
+        border-radius: toRem(18);
+    }
+
+    &__input {
+        position: absolute;
+        top: toRem(8);
+        opacity: 0;
+        //height: .5px;
+        width: 1px;
+    }
+
+    &__text {
+        position: relative;
+        color: #fff;
+        font-size: toRem(14);
+        padding-left: toRem(30);
+        margin-top: toRem(6);
+        &::before {
+            content: "";
+            left: 0;
+            top: toRem(0);
+            position: absolute;
+            width: toRem(22);
+            height: toRem(22);
+            z-index: 2;
+            transition: all .3s;
+            border: 0.125rem solid #b3b1b0;
+            
+        }
+        &::after {
+            font-family: 'icomoon' !important;
+            content: "\e921";
+            color: $mainColor;
+            position: absolute;
+            top: 0.1875rem;
+            left: 0.1875rem;
+            font-size: toRem(16);
+            z-index: 2;
+            
+            }
+        a {
+            text-decoration: underline !important;  
+        }
+        
+    }
+    .checkbox-form__input:checked + .checkbox-form__text::before {
+        border-color: #fff;   
+    }
+    .checkbox-form__input:checked + .checkbox-form__text::after {
+        color: #fff;   
+    }
+    .checkbox-form__input:focus-visible + .checkbox-form__text::before {
+        outline: 0.0625rem solid #B3B7BC;
+    }
+}
+//========================================================================================================================================================
+.advantages {
+    padding-left: toRem(10);
+    padding-right: toRem(10);
+    padding-bottom: 3.125rem;
+    
+    
+    // .advantages__container
+
+    &__container {
+        background-color: #eae7e7;
+        border-radius: 2.5rem;
+        padding-top: toRem(60);
+        padding-bottom: toRem(50);
+        @include adaptiveValue("padding-left", 60, 0);
+        @include adaptiveValue("padding-right", 60, 0);
+    }
+
+    // .advantages__title
+
+    &__title {
+        text-align: center;
+        @media (max-width:$mobile){
+            text-align: center; 
+            font-size: toRem(26);
+        }
+    }
+
+    // .advantages__wrapper
+
+    &__wrapper {
+        padding-top: toRem(50);
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: toRem(25);
+        @media (min-width: em(1130)){
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(13, 140px);
+        }
+    }
+
+    
+    .first {
+        
+        @media (min-width: em(1130)) {
+            grid-row: 1 / 5;
+        }
+    }
+    .second {
+        @media (min-width: em(1130)) {
+            overflow: hidden;
+            grid-row: 1 / 7;
+        }
+        
+    }
+    .third {
+        @media (min-width: em(1130)) {
+            grid-row: 5 / 7;
+        }
+        
+    }
+    .wide {
+        min-height: toRem(500);
+        @media (min-width: em(1130)) {
+            grid-column: 1 / 3;
+            object-fit: cover;
+            grid-row: 7 / 12;
+        }
+        
+    } 
+    .place {
+        @media (min-width: em(1130)) {
+            grid-row: 12 / 14;
+            grid-column: 1 / 2; 
+        }
+
+    }
+    .mark {
+        @media (min-width: em(1130)) {
+            grid-row: 12 / 14;
+            grid-column: 2 / 3;
+        }
+        
+    }
+}
+
+.item-advantages {
+    border-radius: toRem(40);
+    background-color: $mainColor;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    @include adaptiveValue("padding-left", 40, 15, 3, 480, 310);
+    @include adaptiveValue("padding-right", 40, 15, 3, 480, 310);
+    padding-top: toRem(30);
+    display: grid;
+    gap: toRem(15);
+    @include adaptiveValue("gap", 15, 8, 3, 480, 310);
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 2.5rem;
+    @media (max-width: em(1130)) {
+        padding-top: toRem(40); 
+        //padding-bottom: 2.5rem;
+    }
+    @media (max-width:$mobile){
+        padding-top: toRem(20); 
+        padding-bottom: 1.25rem;
+    }
+
+    
+    // .item-advantages__header
+
+    &__header {
+        display: flex;
+        align-items: center;
+        gap: toRem(25);
+    }
+
+    // .item-advantages__descr
+
+    &__descr {
+        color: $bgColor;
+        @include adaptiveValue("font-size", 18, 10);
+        line-height: 155%;
+        font-weight: 500;
+
+    }
+
+    // .item-advantages__image
+
+    &__image {
+        img {
+            width: 100%;
+        }
+    }
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        object-fit: cover;
+        border-radius: toRem(40);
+        img {
+            border-radius: toRem(40);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__titles--top {
+        display: flex;
+        flex-direction: column;
+        gap: toRem(20);
+    }
+    &__title {
+        color: $bgColor;
+        @include adaptiveValue("font-size", 48, 20);
+        line-height: 1.01;
+        font-weight: 700;
+        padding-bottom: 15px;
+        z-index: 1;
+        border-bottom: toRem(2) solid $mainGold;
+        }
+    &__subtitle {
+        z-index: 1;
+        color: $bgColor;
+        @include adaptiveValue("font-size", 24, 12);
+        line-height: 155%;
+        font-weight: 500;
+    } 
+    &.item-advantages.second img {
+        border-radius: toRem(40);
+    }   
+}
+//========================================================================================================================================================
+
+.descr-item-advantages {
+    max-width: toRem(400);
+    padding: toRem(0) toRem(10);
+    display: grid;
+    
+    // .descr-item-advantages__table
+
+    &__table {
+    }
+}
+.table-descr {
+    display: flex;
+    justify-content: space-between !important;
+    padding: toRem(2) toRem(6);
+    gap: toRem(15);
+    // .year-descr__title
+
+    &__title {
+        display: flex;
+        gap: toRem(10);
+        align-items: center;
+    }
+
+    // .year-descr__icon
+
+    &__icon {
+        align-items: center;
+    }
+
+    // .year-descr__value
+
+    &__value {
+        align-self: center;
+    }
+}
+
+
+
+//========================================================================================================================================================
+
+.header-item {
+    
+    // .header-item__icon
+
+    &__icon {
+        border-radius: 1.25rem;
+        background-color: $mainGold;
+        padding: 0.9375rem;
+        @include adaptiveValue("padding", 15, 10, 3, 480, 310);
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        img {
+            border-radius: 0 !important;
+            width: 2.5rem;
+            height: 2.5rem; 
+            @include adaptiveValue("width", 40, 25, 3, 480, 310);
+            @include adaptiveValue("height", 40, 25, 3, 480, 310);
+        }
+        &::before{
+            font-size: toRem(40);
+            @include adaptiveValue("font-size", 40, 25, 3, 480, 310);
+            color: #fff;
+        }
+        svg {
+            color: #fff;
+            stroke: #fff;
+        }
+    }
+
+    // .header-item__title
+
+    &__title {
+    }
+}
+//========================================================================================================================================================
+.order {
+    padding-left: toRem(10);
+    padding-right: toRem(10);
+    padding-bottom: 3.125rem;
+    // .order__container
+
+    &__container {
+        background-color: #eae7e7;
+        border-radius: 2.5rem;
+        padding: toRem(60) toRem(40) toRem(50) toRem(40);
+        @include adaptiveValue("padding-left", 40, 15, 3, 480, 310);
+        @include adaptiveValue("padding-right", 40, 15, 3, 480, 310);
+        
+    }
+
+    // .order__title
+
+    &__title {
+        color: #1f1e1e;
+        @include adaptiveValue("font-size", 57, 22);
+        line-height: 110%;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    // .order__list
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: toRem(30);
+        padding-top: toRem(50);
+        padding-bottom: toRem(50);
+        @include adaptiveValue("padding-top", 50, 15, 3, 480, 310);
+        @include adaptiveValue("padding-bottom", 50, 15, 3, 480, 310);
+    }
+    &__button {
+        color: #ffffff;
+        @include adaptiveValue("font-size", 28, 14);
+        line-height: 1.55;
+        font-weight: 600;
+        @include adaptiveValue("border-radius", 30, 10);
+        background-color: $mainGold;
+        width: 100%;
+        @include adaptiveValue("padding", 25, 10);
+        text-align: center;
+    }
+
+    // .order__item
+
+}
+.item-order {
+    display: flex;
+    gap: toRem(50);
+    @include adaptiveValue("gap", 40, 10, 3, 900, 310);
+
+    &__number {
+        @include adaptiveValue("font-size", 96, 14);
+        padding: toRem(40);
+        @include adaptiveValue("padding", 40, 10, 3, 480, 310);
+        color: $bgColor;
+        background-color:$mainGold;
+        border-radius: toRem(50);
+        @include adaptiveValue("border-radius", 50, 5, 3, 900, 310);
+        font-weight: 700;
+        width: 20%;
+        @include adaptiveValue("width", 150, 20, 3, 900, 310);
+        @include adaptiveValue("height", 150, 20, 3, 900, 310);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        @media (min-width:em(900)){
+            width: toRem(150);
+            height: toRem(150);
+        }
+    }
+
+    // .item-order__body
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        gap: toRem(13);
+        @include adaptiveValue("gap", 20, 6, 3, 900, 310);
+        &--center {
+            align-self: center;
+        }
+    }
+
+    // .item-order__title
+
+    &__title {
+        @include adaptiveValue("font-size", 33, 14);
+        font-weight: 700;
+        line-height: 120%;
+        
+    }
+
+    // .item-order__descr
+
+    &__descr {
+        @include adaptiveValue("font-size", 18, 10);
+        font-weight: 500;
+        line-height: 120%;
+        white-space: wrap;
+    }
+}
+
+
+
+
+

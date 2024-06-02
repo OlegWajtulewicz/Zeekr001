@@ -1,0 +1,13 @@
+// Заголовки, загальні БЕМ блоки та інше...
+.title {
+    @include adaptiveValue("font-size", 54, 32);
+    font-weight: 700;
+    color: $mainColor;
+    line-height: 110%;
+    &--item {
+        color: $bgColor;
+        @include adaptiveValue("font-size", 30, 18);
+        line-height: 126%;
+        font-weight: 700;
+    }
+}

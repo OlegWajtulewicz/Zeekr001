@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"Zeekr 001"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+				<section class="main-block">
+					<div class="main-block__container">
+						<div class="main-block__titles titles-main">
+							<h1 class="titles-main__title title">Подбор  и покупка автомобилей под ключ</h1>
+							<div class="titles-main__subtitle">Zeekr 001 YOU 4WD<br> </div>
+							<div class="titles-main__subtitle">194 000 BYN <br><span class="titles-main__subsubtitle">62 500 $ / 57 590 € </span> </div>
+						</div>
+						<div class="main-block__media">
+							<img src="@img/mainfoto.png" class="main-block__image" alt="mainfoto">
+						</div>
+					</div>
+				</section>
+				<section class="form-section">
+					<div class="form-section__container">
+						<div class="form-section__titles">
+							<h2 class="form-section__title">Оставьте <br>заявку</h2>
+							<div class="form-section__subtitle">на этот  <br> автомобиль</div>
+						</div>
+						<form id="form" class="form-section__form form" data-ajax data-validate data-required required data-popup-message="#thanks" action="files/sendmail/sendmail.php" method="POST">
+								
+							<input required type="text" name="name" placeholder="Имя" class="form__input input _req">
+							<input required type="text" name="email" placeholder="E-mail" class="form__input input">
+							<input required type="tel" name="phone" maxlength="17" placeholder="+375(99)999-99-99" class="form__input input">
+										
+							<div class="checkbox-form">
+								<label class="checkbox-form__body">
+									<input required type="checkbox" name="checkbox" class="checkbox-form__input input">
+									<span class="checkbox-form__text">Согласие на обработку персональных данных</span>
+								</label>
+								<button class="checkbox-form__button button">Оставить заявку</button>
+							</div>
+									
+						</form>
+					</div>
+				</section>
+				<section class="advantages">
+					<div class="advantages__container">
+						<h2 class="advantages__title title">Основные характеристики</h2>
+
+						<div class="advantages__wrapper ">
+
+							<div class="advantages__item item-advantages first">
+								<div class="item-advantages__header header-item">
+									<div class="header-item__icon">
+										<img src="@img/advantage-icon/auto.svg" alt="auto">
+									</div>
+									<h3 class="header-item__title title--item">Zeekr 001 YOU 4WD </h3>
+								</div>
+
+									<div class="item-advantages__descr descr-item-advantages">
+
+
+										<div class="descr-item-advantages__table table-descr">
+											<div class="table-descr__title">
+												<div class="table-descr__icon">
+													<img src="@img/advantage-icon/calender.svg" alt="calender">
+												</div>
+												<span>Год производства</span>
+											</div>
+											<div class="table-descr__value">2023 г.</div>
+										</div>
+										<div class="descr-item-advantages__table table-descr">
+											<div class="table-descr__title">
+												<div class="table-descr__icon">
+													<img src="@img/advantage-icon/pump.svg" alt="pump">
+												</div>
+												<span>Тип топлива</span>
+											</div>
+											<div class="table-descr__value">Электро</div>
+										</div>
+										<div class="descr-item-advantages__table table-descr">
+											<div class="table-descr__title">
+												<div class="table-descr__icon">
+													<img src="@img/advantage-icon/gears.svg" alt="gears">
+												</div>
+												<span>Коробка передач</span>
+											</div>
+											<div class="table-descr__value">Вариатор CVT</div>
+										</div>
+										<div class="descr-item-advantages__table table-descr">
+											<div class="table-descr__title">
+												<div class="table-descr__icon">
+													<img src="@img/advantage-icon/transmission.svg" alt="transmission">
+												</div>
+												<span>Привод</span>
+											</div>
+											<div class="table-descr__value">Полный</div>
+										</div>
+
+
+									</div>
+
+
+									<div class="item-advantages__image">	
+										<img src="@img/advantage/002.png" alt="autoimage">	
+									</div>
+							</div>
+
+							<div class="advantages__item item-advantages second">
+								<div class="item-advantages__header header-item">
+									<div class="header-item__icon icon-Info"></div>
+									<h3 class="header-item__title title--item">Полная<br>информация</h3>
+								</div>
+								<div class="item-advantages__descr">
+									&#10003; &#160; Сенсорное управление на руле <br>
+									&#10003; &#160; Массаж сидений передних <br>
+									&#10003; &#160; Память расположения сидений <br>
+									&#10003; &#160; Автоматическое открытие и закрытие дверей <br>
+									&#10003; &#160; Селфи камера <br>
+									&#10003; &#160; Камера кругового обзора 360 (12 камер) <br>
+									&#10003; &#160; Голосовой помощник <br>
+									&#10003; &#160; Панорамная крыша с защитой от ультрафиолета <br>
+									&#10003; &#160; Ароматизация салона <br>
+									&#10003; &#160; Функция одно-педального вождения <br>
+									&#10003; &#160; Две ключ-карты <br>
+									&#10003; &#160; Датчики контроля мертвых зон <br>
+									&#10003; &#160; Слежение за полосой <br>
+									&#10003; &#160; Доводчики дверей <br>
+									&#10003; &#160; Автоматическая пневмоподвеска <br>
+									 </div>
+									<div class="item-advantages__image">	
+										<img src="@img/advantage/002.jpg" alt="salon">	
+									</div>
+							</div>
+
+							<div class="advantages__item item-advantages third">
+								<div class="item-advantages__header header-item">
+									<div class="header-item__icon icon-Info"></div>
+									<h3 class="header-item__title title--item">Дополнительная <br>
+										информация</h3>
+								</div>
+								<div class="item-advantages__descr">&#8211; &#160; ZEEKR 001 YOU 2023 <br>
+									&#8211; &#160; Максимальная комплектация - You <br>
+									&#8211; &#160; Привод - полный <br>
+									&#8211; &#160; Запас хода - 650км <br>
+									&#8211; &#160; Батарея - 101kWh
+									</div>
+									
+							</div>
+
+							<div class="advantages__item item-advantages wide">
+								<div class="item-advantages__bg">
+									<img src="@img/advantage/003.png" alt="zeekr">
+								</div>
+								<div class="item-advantages__titles--top">
+									<h3 class="item-advantages__title">Дополнительная информация</h3>
+									<div class="item-advantages__subtitle">
+										&#10003; &#160; Ассистент парковки <br>
+										&#10003; &#160; Адаптивный круиз контроль <br>
+										&#10003; &#160; Проекционный дисплей <br>
+										&#10003; &#160; Подогрев передних и задних сидений <br>
+										&#10003; &#160; Подогрев рулевого колеса <br>
+										&#10003; &#160; Подогрев лобового стекла <br>
+										&#10003; &#160; Вентиляция передних сидений <br>
+										&#10003; &#160; Аудиосистема YAMAHA <br>
+										&#10003; &#160; Заводская тонировка задней полусферы <br>
+										&#10003; &#160; Keyless (функционирует при использовании приложения) <br>
+										&#10003; &#160; Беспроводная зарядка <br>
+										&#10003; &#160; Навигация <br>
+										&#10003; &#160; Электропривод всех дверей, включая крышку багажника <br>
+										&#10003; &#160; Электроскладывание/затемнение зеркал 
+									</div>
+								</div>
+							</div>
+
+							<div class="advantages__item item-advantages place">
+								<div class="item-advantages__header header-item">
+									<div class="header-item__icon">
+										<img src="@img/advantage-icon/icon-place.svg" alt="place">
+									</div>
+									<h3 class="header-item__title title--item">Автомобили <br>
+										из любой точки мира</h3>
+								</div>
+								<div class="item-advantages__descr">Вам предоставлен широкий выбор<br> автомобилей с внутренних рынков США, Японии,<br> Кореи, ОАЭ, Европы и Китая
+							</div>
+							</div>
+
+							<div class="advantages__item item-advantages mark">
+								<div class="item-advantages__header header-item">
+									<div class="header-item__icon">
+										<img src="@img/advantage-icon/icon-mark.svg" alt="mark">
+									</div>
+									<h3 class="header-item__title title--item">Опыт работы в  
+										автобизнесе более 18 лет</h3>
+								</div>
+								<div class="item-advantages__descr">Гарантия выгодной цены, юридическая чистота сделки. <br>
+									Гарантия неизменности цены в течение срока действия договора. 
+							</div>
+							</div>
+
+							<div class="advantages__item item-advantages ">
+								<div class="item-advantages__header header-item">
+									<div class="header-item__icon">
+										<img src="@img/advantage-icon/card.svg" alt="card">
+									</div>
+									<h3 class="header-item__title title--item">Приобретение  <br>
+										в кредит</h3>
+								</div>
+								<div class="item-advantages__descr">Вы можете рассчитать кредит  <br>
+									на понравившийся вам автомобиль.    
+							</div>
+							</div>
+
+							<div class="advantages__item item-advantages">
+								<div class="item-advantages__header header-item">
+									<div class="header-item__icon">
+										<img src="@img/advantage-icon/exchange.svg" alt="exchange">
+									</div>
+									<h3 class="header-item__title title--item">Автообмен<br>
+										на выгодных условиях </h3>
+								</div>
+								<div class="item-advantages__descr">Вы можете обменять свой старый<br>
+									автомобиль на новый с доплатой. Выкуп вашего авто <br> 
+							</div>
+							</div>
+
+							<div class="advantages__item item-advantages">
+								<div class="item-advantages__header header-item">
+									<div class="header-item__icon">
+										<img src="@img/advantage-icon/case.svg" alt="case">
+									</div>
+									<h3 class="header-item__title title--item">Покупка<br>
+										в лизинг</h3>
+								</div>
+								<div class="item-advantages__descr">Вы можете оценить условия<br>
+									приобретения автомобиля в лизинг. <br> Возможно приобретение с НДС
+							</div>
+							</div>
+
+							<div class="advantages__item item-advantages">
+								<div class="item-advantages__header header-item">
+									<div class="header-item__icon">
+										<img src="@img/advantage-icon/Shield.svg" alt="Shield">
+									</div>
+									<h3 class="header-item__title title--item">Гарантия<br>
+										безопасной доставки</h3>
+								</div>
+								<div class="item-advantages__descr">Полное страхование авто на всем пути следования. <br>
+									Гарантия кратчайшего срока доставки<br> 
+							</div>
+							</div>
+
+						</div>
+					</div>
+				</section>
+				<section class="order">
+					<div class="order__container">
+						<h2 class="order__title">Этапы приобретения <br>
+							</h2>
+						<div class="order__list">
+							<div class="order__item item-order">
+								<div class="item-order__number">1</div>
+								<div class="item-order__body--center">
+									<h3 class="item-order__title">Выбор модели автомобиля</h3>
+									<div class="item-order__descr">Подбор оптимального варианта по вашим параметрам, <br> включение в заказ дополнительных опций и аксессуаров</div>
+								</div>
+							</div>
+							
+							<div class="order__item item-order">
+								<div class="item-order__number">2</div>
+								<div class="item-order__body--center">
+									<h3 class="item-order__title">Согласование стоимости и срока поставки</h3>
+									<div class="item-order__descr">Формирование ценового предложения с учетом оптимального варианта доставки,   <br>
+										полного страхования авто в пути</div>
+								</div>
+							</div>
+							<div class="order__item item-order">
+								<div class="item-order__number">3</div>
+								<div class="item-order__body--center">
+									<h3 class="item-order__title">Согласование условий оплаты </h3>
+									<div class="item-order__descr">Достижение договоренностей по условиям платежа, согласование лизинговых или кредитных  <br>
+										платежей, выбор оптимального варианта финансирования</div>
+								</div>
+							</div>
+							<div class="order__item item-order">
+								<div class="item-order__number">4</div>
+								<div class="item-order__body--center">
+									<h3 class="item-order__title">Выкуп и организация бережной доставки <br> авто до Минска</h3>
+									
+								</div>
+							</div>
+							<div class="order__item item-order">
+								<div class="item-order__number">5</div>
+								<div class="item-order__body--center">
+									<h3 class="item-order__title">Таможенная очистка на территории РБ</h3>
+									
+								</div>
+							</div>
+							<div class="order__item item-order">
+								<div class="item-order__number">6</div>
+								<div class="item-order__body--center">
+									<h3 class="item-order__title">Оформление необходимых документов,<br> таможенная очистка авто</h3>
+									
+								</div>
+							</div>
+							<div class="order__item item-order">
+								<div class="item-order__number">7</div>
+								<div class="item-order__body--center">
+									<h3 class="item-order__title">Организация транспортировки авто в Москву</h3>
+									
+								</div>
+							</div>
+							<div class="order__item item-order">
+								<div class="item-order__number">8</div>
+								<div class="item-order__body--center">
+									<h3 class="item-order__title">Подписание документов по передаче  авто в вашу  собственность, торжественная выдача авто.</h3>
+									
+								</div>
+							</div>
+						</div>
+						<a href="#" data-goto-top="25" data-goto=".form-section" class="order__button">Оставить заявку</a>
+					</div>
+				</section>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js"></script>
+	<script src="files/jquery.validate.min.js"></script>
+    <script src="files/jquery.maskedinput.js"></script>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>
